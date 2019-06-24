@@ -1,4 +1,10 @@
 # -*- coding: utf-8 -*-
+import six
+if six.PY2:
+	import sys
+	reload(sys)
+	sys.setdefaultencoding('utf-8')
+
 country_tz = {
 	u'不丹': '+6',
 	u'东帝汶': '+9',

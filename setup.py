@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='dtxg',
-    version='1.1',
+    version='2.0.1',
     description=(
         'Extensions to the dateutil module to support time resolution in multiple languages'
     ),

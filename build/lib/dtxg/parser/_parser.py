@@ -53,6 +53,11 @@ from .. import tz
 from . import locales
 from .country_tz import country_tz, country_language
 
+if six.PY2:
+    import sys
+    reload(sys)
+    sys.setdefaultencoding('utf-8')
+
 
 __all__ = ["parse", "parserinfo"]
 

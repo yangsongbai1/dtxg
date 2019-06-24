@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: dtxg
-Version: 1.1
+Version: 2.0.1
 Summary: Extensions to the dateutil module to support time resolution in multiple languages
 Home-page: https://github.com/yangsongbai1
 Author: yangsongbai
