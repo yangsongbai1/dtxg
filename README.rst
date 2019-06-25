@@ -73,15 +73,30 @@ Quick example
 `dtxg` can be installed from PyPI using `pip`::
 
 	from dtxg.parser import parse, UtcTime, country_tz
-
+	
+	# test2
 	a = parse(" Thứ ba, 18/6/2019 | 4:41:27 Chiều", language='西班牙语', tzinfo='UTC', country=None, fuzzy=True)
 	print(a)
 
-
 	# test2
-	utctime = UtcTime(language='西班牙语', tzinfo=None, country='中国')
+	utctime = UtcTime(language='西班牙语', country='中国')
 	a = utctime.parse(" Thứ ba, 18/6/2019 | 4:41:27 Chiều", fuzzy=True)
 	print(a)
+
+	print(country_tz.country_tz)    		查看各国时区(即country_tz的有效参数)
+	print(country_tz.country_language)      	查看各国语言(即language的有效参数)
+	pytz.all_timezones 				查看所有地区时区，(即tzinfo的有效参数)
+
+	lanauge 传入时间字符串的语言种类
+	tzinfo  时区
+	country 国家，用于tzinfo为空时获取时区信息
+	fuzzy	模糊匹配
+	返回utc时间
+	没有解析到时间会抛出异常
+
+	可识别 "2019-06-10T08:00:00-05:00"  "UTC", "GMT", "Z", "z" 
+	优先识别字符串中的时区，其次识别tzinfo传入的时区，如果两者都没有，则以传入country的首都时区返回utc时间，
+	如果都为空，则返回原时间
 
 
 Contributing
