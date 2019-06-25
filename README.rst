@@ -70,7 +70,7 @@ Features
 
 Quick example
 =============
-:
+`dtxg` can be installed from PyPI using `pip`::
 
 	from dtxg.parser import parse, UtcTime, country_tz
 
