@@ -70,7 +70,8 @@ Features
 
 Quick example
 =============
-:
+`dtxg` can be installed from PyPI using `pip`::
+
 	from dateutil.parser import parse, UtcTime, country_tz
 
 	a = parse(" Thứ ba, 18/6/2019 | 4:41:27 Chiều", language='西班牙语', tzinfo='UTC', country=None, fuzzy=True)
