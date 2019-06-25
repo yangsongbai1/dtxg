@@ -68,6 +68,20 @@ Features
 * Extensions to the dateutil module to support time resolution in multiple languages
 * Utc time can be returned based on the time zone parameter
 
+Quick example
+=============
+:
+	from dateutil.parser import parse, UtcTime, country_tz
+
+	a = parse(" Thứ ba, 18/6/2019 | 4:41:27 Chiều", language='西班牙语', tzinfo='UTC', country=None, fuzzy=True)
+	print(a)
+
+
+	# test2
+	utctime = UtcTime(language='西班牙语', tzinfo=None, country='中国')
+	a = utctime.parse(" Thứ ba, 18/6/2019 | 4:41:27 Chiều", fuzzy=True)
+	print(a)
+
 
 Contributing
 ============
